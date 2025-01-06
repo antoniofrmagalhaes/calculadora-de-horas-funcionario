@@ -4,7 +4,6 @@ import { DatePicker } from 'rsuite';
 import { BsCalendar2MonthFill } from 'react-icons/bs';
 import 'rsuite/dist/rsuite.min.css';
 
-import { DayRow, DayRowHandle } from '@/components/DayRow';
 import { useApplication } from '@/contexts/ApplicationContext';
 import { RiMenuLine } from 'react-icons/ri';
 import { Sidebar } from '@/components/Sidebar';
@@ -12,7 +11,6 @@ import DayList from '@/components/DayList';
 
 export default function HomePage(): JSX.Element {
   const { isOpen, onOpen, onClose, onToggle } = useDisclosure();
-  // Tudo vem do nosso contexto:
   const {
     selectedDate,
     setSelectedDate,
@@ -25,7 +23,6 @@ export default function HomePage(): JSX.Element {
     formatHHmm,
   } = useApplication();
 
-  // Renderizamos a tabela, só chamando funções do contexto
   return (
     <Box w="100%" p={6} bg="gray.100">
       <Sidebar isOpen={isOpen} onClose={onClose} onToggle={onToggle} />

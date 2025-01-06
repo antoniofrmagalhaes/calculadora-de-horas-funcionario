@@ -21,7 +21,7 @@ import { useApplication } from '@/contexts/ApplicationContext';
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-  onToggle: () => void; // se quiser usar, é opcional
+  onToggle: () => void; 
 }
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
